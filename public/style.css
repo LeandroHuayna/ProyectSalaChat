@@ -1,0 +1,221 @@
+/* -------------------------------------------------- Clases ocultas -------------------------------------------------- */
+.hidden {
+    display: none; /* Oculta elementos que no deben mostrarse */
+}
+
+/* -------------------------------------------------- Body general -------------------------------------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f2027, #203a2e); /* Fondo degradado verde/negro */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupa toda la pantalla */
+}
+
+/* -------------------------------------------------- Top bar (salas y chat) -------------------------------------------------- */
+.top-bar {
+    display: flex; /* Layout flexible */
+    justify-content: space-between; /* Separar elementos a los extremos */
+    align-items: center; /* Centrar vertical */
+    padding: 10px 15px;
+    background-color: #111; /* Negro profundo */
+    color: #fff; /* Texto blanco */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra suave */
+}
+
+/* -------------------------------------------------- Botón de salir (logout) -------------------------------------------------- */
+#logout-btn {
+    padding: 5px 15px; /* Tamaño más compacto */
+    font-size: 0.9rem;
+    border-radius: 8px;
+    background-color: #50fa7b; /* Verde destacado */
+    color: #111; /* Texto negro */
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#logout-btn:hover {
+    background-color: #3ecf5a; /* Verde más oscuro al hover */
+}
+
+/* -------------------------------------------------- Contenedor de mensajes -------------------------------------------------- */
+#messages {
+    height: 400px; /* Altura fija del chat */
+    overflow-y: auto; /* Scroll vertical */
+    border: 1px solid #444; /* Borde gris oscuro */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px; /* Bordes redondeados */
+    background-color: #1b1b1b; /* Fondo negro suave */
+    color: #fff; /* Texto blanco */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.3); /* Efecto de profundidad */
+}
+
+/* -------------------------------------------------- Scroll personalizado -------------------------------------------------- */
+#messages::-webkit-scrollbar {
+    width: 8px;
+}
+#messages::-webkit-scrollbar-thumb {
+    background: #50fa7b; /* Color del scroll */
+    border-radius: 10px;
+}
+#messages::-webkit-scrollbar-track {
+    background: #111; /* Fondo del scroll */
+}
+
+/* -------------------------------------------------- Input de mensaje y botón de enviar -------------------------------------------------- */
+.message-input {
+    display: flex; /* Layout horizontal */
+    gap: 10px; /* Separación entre input y botón */
+}
+.message-input input {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #222; /* Input oscuro */
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.3); /* Profundidad interna */
+}
+.message-input button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #50fa7b; /* Verde principal */
+    color: #111; /* Texto negro */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+.message-input button:hover {
+    background-color: #3ecf5a; /* Verde oscuro al hover */
+    transform: translateY(-2px); /* Animación sutil */
+}
+
+/* -------------------------------------------------- Botón Menú en chat -------------------------------------------------- */
+#back-to-rooms-btn {
+    padding: 6px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #50fa7b; /* Verde */
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+#back-to-rooms-btn:hover {
+    background-color: #3ecf5a;
+    transform: translateY(-1px);
+}
+
+/* -------------------------------------------------- Pantalla de login -------------------------------------------------- */
+#login-screen {
+    background-color: #111; /* Negro profundo */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4); /* Sombra */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    color: #fff;
+}
+#login-screen h2 {
+    margin-bottom: 1.5rem;
+    color: #50fa7b; /* Verde título */
+}
+#login-screen input,
+#login-screen button {
+    width: 80%; /* mismo ancho */
+    display: block;
+    margin: 0 auto 1rem auto; /* centrados */
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+#login-screen input {
+    padding: 12px;
+    background-color: #222;
+    color: #fff;
+}
+#login-screen button {
+    padding: 12px;
+    background-color: #50fa7b;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+#login-screen button:hover {
+    background-color: #3ecf5a;
+    transform: translateY(-2px);
+}
+
+/* -------------------------------------------------- Pantalla de selección de salas -------------------------------------------------- */
+#room-selection-screen {
+    background-color: #111; /* Negro profundo */
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    text-align: center;
+}
+#room-selection-screen h2 {
+    margin-bottom: 1rem;
+    color: #50fa7b;
+}
+#room-selection-screen button {
+    width: 80%;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 12px;
+    border: none;
+    background-color: #50fa7b;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block; /* centrado */
+}
+#room-selection-screen button:hover {
+    background-color: #3ecf5a;
+}
+#room-selection-screen input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #fff;
+    margin: 0 auto 10px auto; /* centrado */
+    display: block;
+}
+
+/* -------------------------------------------------- Transiciones entre pantallas -------------------------------------------------- */
+.screen {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; /* Evita clics cuando está oculta */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    width: 100%;
+    max-width: 500px;
+}
+.screen.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
