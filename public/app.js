@@ -1,4 +1,4 @@
-const socket = io("http://192.168.0.6:3000");
+const socket = io("https://chat-salas-leo.onrender.com");
 let username = "";
 let currentRoom = "";
 
@@ -116,3 +116,4 @@ socket.on("chat-message", (data) => {
     messagesDiv.appendChild(msgElem);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 });
+
